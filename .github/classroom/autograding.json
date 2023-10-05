@@ -1,0 +1,34 @@
+{
+  "tests": [
+    {
+      "name": "Test Directory Listing",
+      "setup": "",
+      "run": "./1-directory-listing.sh",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": null
+    },
+    {
+      "name": "Test Backup File",
+      "setup": "",
+      "run": "./2-backup-file.sh",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": null
+    },
+    {
+      "name": "Test Backup Directory",
+      "setup": "",
+      "run": "./3-backup-directory.sh",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": null
+    }
+  ]
+}
