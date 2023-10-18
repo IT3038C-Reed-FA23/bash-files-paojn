@@ -4,25 +4,26 @@
 read -p "Enter a directory name or path: " directory
 
 # Check if the specified directory exists
-if [ ]; then
+if [ -d "$directory" ]; then
   # Get the current date and time
-  current_date=
-  current_time=
+  current_date=$(date +"%Y%m%d")
+  current_time=$(date +"%H%M%S")
 
   # Create the backup directory name by appending the current date and time
-  backup_directory=
+  backup_directory="${directory}_backup_${current_date}_${current_time}"
 
   # Create the backup directory
+  mkdir "$backup_directory"
 
 
   # Copy the contents of the original directory to the backup directory
-
+  cp -r "$directory"/* "$backup_directory"
 
   # Compress the backup directory using tar
-
+  tar -czf "${backup_directory}.tar.gz" "$backup_directory"
 
   # Remove the uncompressed backup directory
-
+  rm -r "$backup_directory"
 
   echo "Backup directory '$backup_directory.tar.gz' created and compressed successfully."
 else
